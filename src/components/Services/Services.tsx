@@ -1,8 +1,9 @@
 import React from 'react';
 import { services } from '../../utils/services';
 import ServiceItem from '../ServiceItem/ServiceItem';
-import styled from './OurServices.module.scss';
-const OurServices = () => {
+import styled from './Services.module.scss';
+
+const Services = () => {
   return (
     <div className={styled.container}>
       <h2>Our Services</h2>
@@ -20,4 +21,4 @@ const OurServices = () => {
   );
 };
 
-export default OurServices;
+export default Services;

@@ -10,6 +10,8 @@ import image1 from './img-1.png';
 import image2 from './img-2.png';
 import image3 from './img-3.png';
 import image4 from './img-4.png';
+import image5 from './img-5.png';
+import image6 from './img-5.png';
 
 export const images = {
   logo,
@@ -21,4 +23,6 @@ export const images = {
   image2,
   image3,
   image4,
+  image5,
+  image6,
 };

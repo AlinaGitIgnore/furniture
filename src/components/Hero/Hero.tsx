@@ -1,12 +1,15 @@
 import Header from '../Header/Header';
-import Swiper from '../Swiper/Carousel';
+import SwiperItem from '../SwiperItem/SwiperItem';
 import styled from './Hero.module.scss';
+import Swiper from '../Swiper/Swiper';
 
 const Hero = () => {
   return (
     <div className={styled.heroSection}>
       <Header />
-      <Swiper />
+      <Swiper>
+        <SwiperItem />
+      </Swiper>
     </div>
   );
 };

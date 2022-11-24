@@ -1,8 +1,6 @@
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+  position: relative;
+  margin-top: 100px;
 
   .controller {
     background-color: black;
@@ -10,6 +8,7 @@
     width: 85px;
     height: 85px;
     padding: 30px 0;
+    cursor: pointer;
     & > * {
       margin: 0 auto;
       display: block;
@@ -17,5 +16,18 @@
       stroke: white;
       width: 18px;
     }
+  }
+
+  .controllerPrev {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 99;
+  }
+
+  .controllerNext {
+    position: absolute;
+    top: 50%;
+    right: 20px;
   }
 }
