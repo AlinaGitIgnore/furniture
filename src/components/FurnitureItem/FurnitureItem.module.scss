@@ -1,0 +1,23 @@
+.furnitureItem {
+  width: 100%;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  & > h4 {
+    font-size: 18px;
+    color: #fabb25;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0;
+  }
+
+  & > p {
+    font-size: 18px;
+    color: #121111;
+    margin-top: 10px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+}

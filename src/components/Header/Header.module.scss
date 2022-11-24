@@ -1,0 +1,71 @@
+.headerSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+
+    .logoWrap {
+      margin-right: 85px;
+
+      .heroLogo {
+        width: 24opx;
+        height: 42px;
+      }
+    }
+
+    .navList {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .rightSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .telWrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: normal;
+      color: #ffb607;
+      margin-right: 20px;
+
+      & > p {
+        color: #ffb607;
+        margin-right: 10px;
+      }
+
+      & > a {
+        color: #ffb607;
+        text-decoration: none;
+      }
+    }
+    .search {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .navLink {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #111;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  .navItem:hover .navLink,
+  .navItem:focus .navLink {
+    color: #ffb607;
+  }
+}

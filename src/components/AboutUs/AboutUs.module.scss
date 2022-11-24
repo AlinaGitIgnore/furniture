@@ -1,0 +1,58 @@
+.container {
+  padding: 90px 10%;
+  background-color: #ffb607;
+  height: auto;
+
+  .aboutWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .textWrap {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin-right: 30px;
+
+      & > h2 {
+        font-size: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+      & > p {
+        font-weight: 300;
+        line-height: 24px;
+        font-size: 16px;
+        color: #fff;
+        margin-top: 80px;
+      }
+
+      & > button {
+        width: 30%;
+        margin-top: 70px;
+        font-size: 18px;
+        line-height: 1.80857;
+        font-weight: 400;
+        color: #fff;
+        background-color: #070201;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 5px;
+        border: none;
+        text-transform: uppercase;
+
+        &hover,
+        &:focus {
+          color: #000;
+          background-color: #fff;
+        }
+      }
+    }
+
+    & > img {
+      width: 50%;
+    }
+  }
+}
