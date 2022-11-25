@@ -14,7 +14,7 @@ const Services = () => {
       <ul className={styled.servicesList}>
         {services.map(service => {
           const { id, name, text, image } = service;
-          return <ServiceItem id={id} image={image} text={text} name={name} />;
+          return <ServiceItem key={id} image={image} text={text} name={name} />;
         })}
       </ul>
     </div>

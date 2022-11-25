@@ -1,13 +1,14 @@
 import React from 'react';
 
-import Header from './components/Header/Header';
-
-import styled from './App.module.scss';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
 import AboutUs from './components/AboutUs/AboutUs';
 import Furnitures from './components/Furnitures/Furnitures';
 import Projects from './components/Projects/Projects';
+import WhoWeAre from './components/WhoWeAre/WhoWeAre';
+import Clients from './components/Clients/Clients';
+
+import styled from './App.module.scss';
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
       <Services />
       <AboutUs />
       <Furnitures />
+      <WhoWeAre />
       <Projects />
+      <Clients />
     </div>
   );
 }

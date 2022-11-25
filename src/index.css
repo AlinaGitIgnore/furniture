@@ -24,16 +24,11 @@ h1,
 h2,
 h3,
 p {
-  margin-top: 0;
+  margin: 0;
 }
 
 p {
   margin-bottom: 0;
-}
-
-h2,
-h3 {
-  color: var(--title-cl);
 }
 
 img {
@@ -50,4 +45,40 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.slick-slide {
+  margin-right: 30px;
+  cursor: grab;
+}
+
+.slick-dots li button {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffb607;
+  border-radius: 50%;
+}
+
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 20px;
+  height: 20px;
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  opacity: 0.55;
+  -webkit-font-smoothing: antialiased;
+}
+.slick-dots li.slick-active button {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #111;
+  border-radius: 50%;
+  opacity: 0.75;
 }

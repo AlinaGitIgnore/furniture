@@ -9,7 +9,7 @@ const navigation = [
   { name: 'services', id: 2, href: 'services.html' },
   { name: 'About', id: 3, href: 'about.html' },
   { name: 'Shop', id: 4, href: 'shop.html' },
-  { name: 'Contact', id: 4, href: 'contact.html' },
+  { name: 'Contact', id: 5, href: 'contact.html' },
 ];
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
         </div>
         <ul className={styled.navList}>
           {navigation.map(nav => (
-            <li className={styled.navItem}>
+            <li className={styled.navItem} key={nav.id}>
               <a className={styled.navLink} href={nav.href}>
                 {nav.name}
               </a>

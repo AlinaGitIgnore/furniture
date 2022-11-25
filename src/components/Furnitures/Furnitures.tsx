@@ -12,7 +12,7 @@ const Furnitures = () => {
       </div>
       <ul className={styled.furnitureList}>
         {furnitures.map(furniture => (
-          <FurnitureItem furniture={furniture} />
+          <FurnitureItem furniture={furniture} key={furniture.id} />
         ))}
       </ul>
     </div>

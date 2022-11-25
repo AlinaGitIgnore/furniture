@@ -1,10 +1,12 @@
 .container {
   position: relative;
   margin-top: 100px;
+  width: 100%;
+  /* width: 1140px;
+  margin: 100px auto 0 auto; */
 
   .controller {
     background-color: black;
-    border-radius: 50%;
     width: 85px;
     height: 85px;
     padding: 30px 0;
@@ -20,14 +22,23 @@
 
   .controllerPrev {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 20px;
     z-index: 99;
   }
 
   .controllerNext {
     position: absolute;
-    top: 50%;
+    top: 35%;
     right: 20px;
+  }
+
+  .sliderWrap {
+    padding: 0 150px;
+  }
+
+  .sliderWrapComment {
+    margin: 0 auto;
+    width: 80%;
   }
 }

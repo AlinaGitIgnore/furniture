@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from './ProjectItem.module.scss';
 
-interface IProps {
+export interface IProjectItemProp {
   project: {
     title: string;
     image: string;
@@ -9,22 +9,20 @@ interface IProps {
   };
 }
 
-const ProjectItem: React.FC<IProps> = ({ project }) => {
+const ProjectItem: React.FC<IProjectItemProp> = ({ project }) => {
   return (
-    <>
-      <div className={styled.projectWrap}>
-        <img
-          className={styled.projectImg}
-          src={project.image}
-          alt={`img ${project.id}`}
-          key={project.id}
-        />
-        <h3 className={styled.projectTitle}>{project.title}</h3>
-        <div className={styled.overlay}>
-          <button className={styled.buttonMore}>View more</button>
-        </div>
+    <div className={styled.projectWrap} key={project.id}>
+      <img
+        className={styled.projectImg}
+        src={project.image}
+        alt={`img ${project.id}`}
+        key={project.id}
+      />
+      <h3 className={styled.projectTitle}>{project.title}</h3>
+      <div className={styled.overlay}>
+        <button className={styled.buttonMore}>View more</button>
       </div>
-    </>
+    </div>
   );
 };
 
