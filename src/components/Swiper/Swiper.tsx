@@ -9,7 +9,6 @@ import HeroItem from '../HeroItem/HeroItem';
 import ProjectItem from '../ProjectItem/ProjectItem';
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
-import Comment from '../Comment/Comment';
 import CommentPage from '../CommentPage/CommentPage';
 interface IProps {
   items: any;
@@ -58,7 +57,7 @@ export const Swiper: React.FC<IProps> = ({ items, slidesToShow, name }) => {
                 width: '150px',
                 margin: '0px',
                 position: 'absolute',
-                bottom: '-70px',
+                bottom: '70px',
                 left: '80px',
                 backgroundColor: 'none',
               }

@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  color: white;
+  background-color: rgb(250, 188, 38);
+  background-image: linear-gradient(
+      to right,
+      rgba(250, 188, 38, 0.85),
+      rgba(250, 188, 38, 0.85)
+    ),
+    url('../../assets/images/img-2.png');
+  background-position: center;
+  background-size: cover;
+  background-size: 100%;
+  padding: 90px;
+
+  .image {
+    width: 50%;
+    margin-top: 60px;
+    overflow: hidden;
+
+    & > img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

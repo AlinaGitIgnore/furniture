@@ -9,6 +9,7 @@ import WhoWeAre from './components/WhoWeAre/WhoWeAre';
 import Clients from './components/Clients/Clients';
 
 import styled from './App.module.scss';
+import ContactUs from './components/ContactUs/ContactUs';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <WhoWeAre />
       <Projects />
       <Clients />
+      <ContactUs />
     </div>
   );
 }
