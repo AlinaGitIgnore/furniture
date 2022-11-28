@@ -10,6 +10,8 @@ import Clients from './components/Clients/Clients';
 
 import styled from './App.module.scss';
 import ContactUs from './components/ContactUs/ContactUs';
+import Info from './components/Info/Info';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
       <Projects />
       <Clients />
       <ContactUs />
+      <Footer />
     </div>
   );
 }

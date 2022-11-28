@@ -15,6 +15,7 @@ import image6 from './img-6.png';
 import image7 from './img-7.png';
 import image8 from './img-8.png';
 import image9 from './img-9.png';
+import designTogether from './footer-logo.png';
 
 export const images = {
   logo,
@@ -31,4 +32,5 @@ export const images = {
   image7,
   image8,
   image9,
+  designTogether,
 };

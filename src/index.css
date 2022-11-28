@@ -82,3 +82,7 @@ a {
   border-radius: 50%;
   opacity: 0.75;
 }
+
+.section {
+  padding: 90px 0;
+}
