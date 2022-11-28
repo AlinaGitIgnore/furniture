@@ -1,6 +1,5 @@
 import React from 'react';
 import { comments } from '../../utils/comments';
-import CommentPage from '../CommentPage/CommentPage';
 import Swiper from '../Swiper/Swiper';
 import styled from './Clients.module.scss';
 const Clients = () => {

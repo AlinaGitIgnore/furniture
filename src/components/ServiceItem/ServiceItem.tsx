@@ -11,7 +11,7 @@ const ServiceItem: React.FC<IProps> = ({ name, text, image }) => {
   return (
     <li className={styled.container}>
       <img src={image} alt={name} />
-      <h2>{name}</h2>
+      <h3>{name}</h3>
       <p>{text}</p>
 
       <button>Read more</button>

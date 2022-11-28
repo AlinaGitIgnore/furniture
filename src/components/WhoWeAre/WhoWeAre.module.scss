@@ -1,3 +1,4 @@
+@import '../../scss/index.scss';
 .container {
   display: flex;
   flex-direction: column;
@@ -17,14 +18,8 @@
   padding: 55px 90px;
 
   & > h2 {
+    @include title-h2-light;
     font-size: 36px;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0;
-    text-align: center;
   }
 
   & > h3 {

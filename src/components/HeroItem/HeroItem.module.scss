@@ -1,3 +1,4 @@
+@import '../../scss/index.scss';
 .swiperItem {
   display: flex;
   flex-direction: column;
@@ -13,10 +14,8 @@
     text-transform: uppercase;
   }
   & > p {
-    font-size: 16px;
-    font-weight: 300;
-    color: #090808;
-    text-align: center;
+    @include text;
+    margin-top: 50px;
   }
 
   & > button {

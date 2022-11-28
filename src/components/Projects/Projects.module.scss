@@ -1,24 +1,16 @@
+@import '../../scss/index.scss';
+
 .container {
   display: flex;
   flex-direction: column;
   padding: 90px 40px;
 
   & > h2 {
-    font-size: 36px;
-    color: #121111;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0;
-    font-weight: 400;
-    line-height: normal;
+    @include title-h2-dark;
   }
   & > p {
-    font-size: 16px;
-    color: #090808;
-    text-align: center;
+    @include text;
     margin-left: 0;
     margin-top: 10px;
-    font-weight: 300;
-    line-height: 24px;
   }
 }

@@ -1,3 +1,4 @@
+@import '../../scss/index.scss';
 .container {
   width: 100%;
   max-width: 700px;
@@ -37,11 +38,8 @@
     }
 
     & > p {
+      @include text;
       margin-top: 10px;
-      font-size: 16px;
-      color: #191919;
-      font-weight: 300;
-      line-height: 24px;
     }
   }
 }

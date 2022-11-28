@@ -1,3 +1,5 @@
+@import '../../scss/index.scss';
+
 .container {
   padding: 90px 10%;
   background-color: #ffb607;
@@ -15,16 +17,13 @@
       margin-right: 30px;
 
       & > h2 {
-        font-size: 40px;
-        color: #fff;
-        text-transform: uppercase;
-        font-weight: 500;
+        @include title-h2-light;
+        text-align: left;
       }
 
       & > p {
-        font-weight: 300;
-        line-height: 24px;
-        font-size: 16px;
+        @include text;
+        text-align: left;
         color: #fff;
         margin-top: 80px;
       }

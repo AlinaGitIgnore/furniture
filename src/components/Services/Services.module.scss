@@ -1,15 +1,11 @@
+@import '../../scss/index.scss';
+
 .container {
   display: flex;
   flex-direction: column;
   padding: 90px 30px;
   & > h2 {
-    width: 100%;
-    float: left;
-    font-size: 36px;
-    font-weight: 400;
-    color: #090808;
-    text-align: center;
-    text-transform: uppercase;
+    @include title-h2-dark;
   }
 
   & > p {
@@ -24,14 +20,6 @@
   }
 
   .servicesList {
-    /* grid-template-columns: repeat(
-      auto-fit,
-      minmax(min(255px, max(511px, 100%)), 255px)
-    );
-    grid-column-gap: 30px;
-    grid-row-gap: 30px; */
-    margin-top: 90px;
-
     display: grid;
     grid-template-columns: repeat(
       auto-fit,
@@ -40,5 +28,6 @@
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     justify-content: center;
+    margin-top: 90px;
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Field, Form, Formik } from 'formik';
-import { validationSchema } from '../../utils/validationSchema';
+import { validationSchema } from 'utils/validationSchema';
 
 import styled from './ContactForm.module.scss';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { images } from '../../assets/images';
+import { images } from 'assets/images';
 import ContactForm from '../Form/ContactForm';
 import styled from './ContactUs.module.scss';
 
