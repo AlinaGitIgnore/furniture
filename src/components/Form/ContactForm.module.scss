@@ -4,12 +4,21 @@
   width: 50%;
   margin-right: 30px;
 
+  @media screen and (max-width: $size-m) {
+    width: 100%;
+    margin-right: 0px;
+  }
+
   & > h2 {
     @include title-h2-light;
     font-size: 36px;
     text-align: left;
     font-weight: 400;
     margin-bottom: 40px;
+
+    @media screen and (max-width: $size-m) {
+      text-align: center;
+    }
   }
   .formWrap {
     position: relative;
@@ -64,5 +73,9 @@
     font-weight: 700;
     margin-top: 50px;
     cursor: pointer;
+
+    @media screen and (max-width: $size-m) {
+      width: 100%;
+    }
   }
 }

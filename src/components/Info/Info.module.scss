@@ -1,18 +1,13 @@
 @import '../../scss/index.scss';
-.infoWrap {
+.infoSection {
   background-color: #313131;
-
+  padding: 90px 0px;
   .gridContainer {
-    display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(min(255px, max(255px, 50%)), 255px)
-    );
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    justify-content: center;
+    @include gridList;
   }
-
+  & img {
+    width: 210px;
+  }
   & h3 {
     font-size: 24px;
     color: #fff;
@@ -27,6 +22,11 @@
     text-align: left;
     margin-left: 0;
     margin-top: 30px;
+    width: 204px;
+
+    @media screen and (max-width: $size-m) {
+      width: 60%;
+    }
   }
 
   & ul {
@@ -51,25 +51,43 @@
     flex-direction: row;
     justify-content: space-between;
     width: 45%;
-    margin: 0 0 0 auto;
+    margin: 50px 0 0 auto;
     background-color: transparent;
     border-bottom: 1px solid #ffff;
 
+    @media screen and (max-width: $size-m) {
+      width: 50%;
+    }
+
     .formWrap {
+      position: relative;
       width: 100%;
+
+      .error {
+        position: absolute;
+        top: -25px;
+        left: 0px;
+        font-weight: 400;
+        font-size: 16px;
+        color: #d52121;
+      }
 
       .input {
         width: 100%;
         background-color: transparent;
         border: none;
         appearance: none;
+        outline: none;
         overflow: hidden;
+        line-height: 1.5;
+        font-family: 'Poppins';
         font-size: 18px;
         padding: 0 15px 10px 0;
       }
     }
 
     .buttonSubmit {
+      font-family: 'Poppins';
       font-size: 18px;
       font-weight: 700;
       line-height: 1.5;

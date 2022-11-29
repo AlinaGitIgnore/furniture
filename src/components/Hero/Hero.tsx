@@ -6,10 +6,12 @@ import { heroSliders } from '../../utils/heroSliders';
 
 const Hero = () => {
   return (
-    <div className={styled.heroSection}>
-      <Header />
-      <Swiper items={heroSliders} slidesToShow={1} name="heroSliders" />
-    </div>
+    <section className={styled.heroSection}>
+      <div className={`container`}>
+        <Header />
+        <Swiper items={heroSliders} slidesToShow={1} name="heroSliders" />
+      </div>
+    </section>
   );
 };
 

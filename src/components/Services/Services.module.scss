@@ -1,14 +1,12 @@
 @import '../../scss/index.scss';
 
-.container {
-  display: flex;
-  flex-direction: column;
-  padding: 90px 30px;
-  & > h2 {
+.servicesSection {
+  padding: 90px 0px;
+  & h2 {
     @include title-h2-dark;
   }
 
-  & > p {
+  & p {
     width: 100%;
     float: left;
     font-size: 16px;
@@ -20,14 +18,7 @@
   }
 
   .servicesList {
-    display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(min(255px, max(255px, 50%)), 255px)
-    );
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    justify-content: center;
-    margin-top: 90px;
+    @include gridList;
+    margin-top: 50px;
   }
 }

@@ -1,7 +1,7 @@
 @import '../../scss/index.scss';
 
-.container {
-  padding: 90px 10%;
+.aboutSection {
+  padding: 90px 0;
   background-color: #ffb607;
   height: auto;
 
@@ -10,15 +10,28 @@
     flex-direction: row;
     align-items: flex-start;
 
+    @media screen and (max-width: $size-m) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .textWrap {
       display: flex;
       flex-direction: column;
       width: 50%;
       margin-right: 30px;
 
+      @media screen and (max-width: $size-m) {
+        width: 100%;
+      }
+
       & > h2 {
         @include title-h2-light;
         text-align: left;
+
+        @media screen and (max-width: $size-m) {
+          text-align: center;
+        }
       }
 
       & > p {
@@ -26,10 +39,14 @@
         text-align: left;
         color: #fff;
         margin-top: 80px;
+
+        @media screen and (max-width: $size-m) {
+          text-align: center;
+        }
       }
 
       & > button {
-        width: 30%;
+        width: 50%;
         margin-top: 70px;
         font-size: 18px;
         line-height: 1.80857;
@@ -43,16 +60,31 @@
         text-transform: uppercase;
         cursor: pointer;
 
+        @media screen and (max-width: $size-m) {
+          width: 100%;
+        }
+        @media screen and (min-width: $size-l) {
+          width: 30%;
+        }
+
         &:hover,
         &:focus {
           color: #000;
           background-color: #fff;
         }
       }
+
+      @media screen and (max-width: $size-m) {
+        margin-right: 0;
+      }
     }
 
     & > img {
       width: 50%;
+
+      @media screen and (max-width: $size-m) {
+        display: none;
+      }
     }
   }
 }

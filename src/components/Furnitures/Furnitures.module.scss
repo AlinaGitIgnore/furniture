@@ -1,9 +1,12 @@
 @import '../../scss/index.scss';
 
-.container {
+.furnitures {
+  padding: 90px 0px;
+}
+
+.furnituresWrap {
   display: flex;
   flex-direction: column;
-  padding: 90px 40px;
 
   .textWrap {
     display: flex;
@@ -26,5 +29,13 @@
     grid-column-gap: 30px;
     grid-row-gap: 0px;
     margin-top: 110px;
+
+    @media screen and (max-width: $size-m) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 60px;
+      margin-top: 50px;
+    }
   }
 }

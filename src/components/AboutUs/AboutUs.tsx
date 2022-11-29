@@ -4,9 +4,9 @@ import styled from './AboutUs.module.scss';
 
 const AboutUs = () => {
   return (
-    <div className={styled.container}>
-      <div className={styled.aboutWrap}>
-        <div className={styled.textWrap}>
+    <section className={styled.aboutSection}>
+      <div className={`container ${styled.aboutWrap}`}>
+        <article className={styled.textWrap}>
           <h2>About Us</h2>
           <p>
             There are many variations of passages of Lorem Ipsum available, but
@@ -16,10 +16,10 @@ const AboutUs = () => {
             available, but the majority have able
           </p>
           <button>Read more</button>
-        </div>
+        </article>
         <img src={images.image1} alt="image1" />
       </div>
-    </div>
+    </section>
   );
 };
 
