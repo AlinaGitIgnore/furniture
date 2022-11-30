@@ -50,7 +50,6 @@ a {
 
 .Projects_container__Y6jfp .slick-slide {
   margin-right: 30px;
-  cursor: grab;
 }
 
 .slick-slide {
@@ -92,6 +91,12 @@ a {
   padding: 0px 50px;
   @media screen and (max-width: $size-m) {
     padding: 0px 105px;
+  }
+}
+
+.App > .Hero_heroSection__xFqrf > .container {
+  @media screen and (max-width: $size-m) {
+    padding: 0;
   }
 }
 

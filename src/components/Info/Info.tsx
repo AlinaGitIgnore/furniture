@@ -1,5 +1,4 @@
 import { Field, Form, Formik } from 'formik';
-import React from 'react';
 import { images } from '../../assets/images';
 import { validationSchema } from '../../utils/validationSchema';
 

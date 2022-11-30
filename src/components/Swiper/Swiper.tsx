@@ -1,15 +1,14 @@
 import React, { useRef } from 'react';
-
 import Slider from 'react-slick';
 import { MdArrowRightAlt } from 'react-icons/md';
 import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
-
 import styled from './Swiper.module.scss';
 import HeroItem from '../HeroItem/HeroItem';
 import ProjectItem from '../ProjectItem/ProjectItem';
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 import CommentPage from '../CommentPage/CommentPage';
+
 interface IProps {
   items: any;
   slidesToShow: number;
@@ -20,6 +19,7 @@ export const Swiper: React.FC<IProps> = ({ items, slidesToShow, name }) => {
   const sliderRef = useRef(null);
   let size = 2;
   let subarray = [];
+
   for (let i = 0; i < Math.ceil(items.length / size); i++) {
     subarray[i] = items.slice(i * size, i * size + size);
   }
