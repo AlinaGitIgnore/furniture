@@ -16,7 +16,7 @@ const Clients = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
       </div>
 
-      <Swiper items={comments} slidesToShow={2} name="comments" />
+      <Swiper items={comments} name="comments" />
     </div>
   );
 };

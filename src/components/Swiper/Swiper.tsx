@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
 import { MdArrowRightAlt } from 'react-icons/md';
 import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
@@ -9,32 +9,39 @@ import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 import CommentPage from '../CommentPage/CommentPage';
 import { useMediaQuery } from 'react-responsive';
+import ProjectSlide from 'components/ProjectSlide/ProjectSlide';
+
+import { breakArr } from 'utils/breakArr';
 interface IProps {
   items: any;
-  slidesToShow: number;
   name: string;
 }
 
-export const Swiper: React.FC<IProps> = ({ items, slidesToShow, name }) => {
+export const Swiper: React.FC<IProps> = ({ items, name }) => {
+  const [projectSlideArr, setProjectSlideArr] = useState([]);
+  const [commentsSliderArr, setCommentsSliderArr] = useState([]);
+
   const isMobileOrLaptop = useMediaQuery({
     query: '(max-width: 720px)',
   });
 
-  const sliderRef = useRef(null);
-  let size = 2;
-  let subarray = [];
+  useEffect(() => {
+    const projectSlide = breakArr(3, items);
+    const commentsSlider = breakArr(2, items);
+    //@ts-ignore
+    setProjectSlideArr(projectSlide);
+    //@ts-ignore
+    setCommentsSliderArr(commentsSlider);
+  }, [items]);
 
-  for (let i = 0; i < Math.ceil(items.length / size); i++) {
-    subarray[i] = items.slice(i * size, i * size + size);
-  }
+  const sliderRef = useRef(null);
 
   var settings = {
     arrows: false,
     dots: true,
     className: 'slider',
     infinite: true,
-    slidesToShow:
-      name === 'heroSliders' || name === 'comments' ? 1 : slidesToShow,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
     speed: 2000,
@@ -78,16 +85,16 @@ export const Swiper: React.FC<IProps> = ({ items, slidesToShow, name }) => {
       <div
         className={`${styled.controllerPrev} ${styled.controller}`}
         style={
-          slidesToShow === 1
+          name === 'heroSliders'
             ? { borderRadius: '50%' }
-            : slidesToShow === 3
+            : name === 'projects'
             ? { borderRadius: 'none' }
             : { display: 'none' }
         }
         //@ts-ignore
         onClick={() => sliderRef.current.slickPrev()}
       >
-        {slidesToShow === 1 ? (
+        {name === 'heroSliders' ? (
           <MdArrowRightAlt style={{ rotate: '180deg' }} />
         ) : (
           <SlArrowLeft />
@@ -107,9 +114,9 @@ export const Swiper: React.FC<IProps> = ({ items, slidesToShow, name }) => {
       ) : name === 'projects' ? (
         <div className={styled.sliderWrap}>
           <Slider {...settings} ref={sliderRef}>
-            {items.map(
+            {projectSlideArr.map(
               (item: { title: string; image: string; id: string | number }) => (
-                <ProjectItem project={item} key={item.id} />
+                <ProjectSlide projects={item} key={item.id} />
               ),
             )}
           </Slider>
@@ -117,7 +124,7 @@ export const Swiper: React.FC<IProps> = ({ items, slidesToShow, name }) => {
       ) : name === 'comments' ? (
         <div className={styled.sliderWrapComment}>
           <Slider {...settings} ref={sliderRef}>
-            {subarray.map((commentsPair, idx) => (
+            {commentsSliderArr.map((commentsPair, idx) => (
               <CommentPage commentsPair={commentsPair} key={idx} />
             ))}
           </Slider>
@@ -129,16 +136,16 @@ export const Swiper: React.FC<IProps> = ({ items, slidesToShow, name }) => {
       <div
         className={`${styled.controllerNext} ${styled.controller}`}
         style={
-          slidesToShow === 1
+          name === 'heroSliders'
             ? { borderRadius: '50%' }
-            : slidesToShow === 3
+            : name === 'projects'
             ? { borderRadius: 'none' }
             : { display: 'none' }
         }
         //@ts-ignore
         onClick={() => sliderRef.current.slickNext()}
       >
-        {slidesToShow === 1 ? <MdArrowRightAlt /> : <SlArrowRight />}
+        {name === 'heroSliders' ? <MdArrowRightAlt /> : <SlArrowRight />}
       </div>
     </div>
   );

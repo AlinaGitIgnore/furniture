@@ -13,7 +13,7 @@ const Projects = () => {
         dolorum..
       </p>
 
-      <Swiper items={projects} slidesToShow={3} name="projects" />
+      <Swiper items={projects} name="projects" />
     </div>
   );
 };

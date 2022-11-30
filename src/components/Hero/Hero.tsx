@@ -10,7 +10,7 @@ const Hero = () => {
     <section className={styled.heroSection}>
       <div className={`container`}>
         <Header />
-        <Swiper items={heroSliders} slidesToShow={1} name="heroSliders" />
+        <Swiper items={heroSliders} name="heroSliders" />
       </div>
     </section>
   );

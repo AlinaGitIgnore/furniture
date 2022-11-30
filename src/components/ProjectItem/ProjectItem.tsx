@@ -11,7 +11,7 @@ export interface IProjectItemProp {
 
 const ProjectItem: React.FC<IProjectItemProp> = ({ project }) => {
   return (
-    <div className={styled.projectWrap} key={project.id}>
+    <li className={styled.projectWrap} key={project.id}>
       <img
         className={styled.projectImg}
         src={project.image}
@@ -22,7 +22,7 @@ const ProjectItem: React.FC<IProjectItemProp> = ({ project }) => {
       <div className={styled.overlay}>
         <button className={styled.buttonMore}>View more</button>
       </div>
-    </div>
+    </li>
   );
 };
 
