@@ -5,7 +5,7 @@ interface IProps {
 }
 
 const Menu: React.FC<IProps> = ({ children }) => {
-  return <div className={styled.modalContent}>{children}</div>;
+  return <div className={styled.menuContent}>{children}</div>;
 };
 
 export default Menu;

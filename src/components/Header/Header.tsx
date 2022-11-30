@@ -32,12 +32,6 @@ const Header = () => {
             >
               {!isOpen ? <AiOutlineMenu /> : <AiOutlineClose />}
             </div>
-            {isOpen && (
-              <Menu>
-                <Navlist />
-                <Connect />
-              </Menu>
-            )}
           </>
         ) : (
           <>
@@ -46,6 +40,12 @@ const Header = () => {
           </>
         )}
       </nav>
+      {isOpen && (
+        <Menu>
+          <Navlist />
+          <Connect />
+        </Menu>
+      )}
     </div>
   );
 };

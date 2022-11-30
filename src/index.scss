@@ -90,13 +90,7 @@ a {
 .container {
   padding: 0px 50px;
   @media screen and (max-width: $size-m) {
-    padding: 0px 105px;
-  }
-}
-
-.App > .Hero_heroSection__xFqrf > .container {
-  @media screen and (max-width: $size-m) {
-    padding: 0;
+    padding: 0px 20px;
   }
 }
 
