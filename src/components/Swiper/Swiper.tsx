@@ -8,7 +8,7 @@ import ProjectItem from '../ProjectItem/ProjectItem';
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 import CommentPage from '../CommentPage/CommentPage';
-
+import { useMediaQuery } from 'react-responsive';
 interface IProps {
   items: any;
   slidesToShow: number;
@@ -16,6 +16,10 @@ interface IProps {
 }
 
 export const Swiper: React.FC<IProps> = ({ items, slidesToShow, name }) => {
+  const isMobileOrLaptop = useMediaQuery({
+    query: '(max-width: 720px)',
+  });
+
   const sliderRef = useRef(null);
   let size = 2;
   let subarray = [];
@@ -52,7 +56,7 @@ export const Swiper: React.FC<IProps> = ({ items, slidesToShow, name }) => {
     ) => (
       <ul
         style={
-          name === 'comments'
+          name === 'comments' && !isMobileOrLaptop
             ? {
                 width: '150px',
                 margin: '0px',

@@ -1,4 +1,4 @@
-@import '../../scss/index.scss';
+@import 'scss';
 .container {
   width: 100%;
   max-width: 700px;
@@ -7,11 +7,19 @@
   padding: 17px;
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: $size-m) {
+    flex-direction: column;
+  }
 
   .image {
     position: relative;
     width: 100%;
     height: max-content;
+
+    @media screen and (max-width: $size-m) {
+      width: 162px;
+      height: 106px;
+    }
     & > img {
       width: 100%;
     }
@@ -35,11 +43,17 @@
       font-weight: 400;
       line-height: normal;
       letter-spacing: 0;
+      @media screen and (max-width: $size-m) {
+        margin-top: 20px;
+      }
     }
 
     & > p {
       @include text;
       margin-top: 10px;
+      @media screen and (max-width: $size-m) {
+        text-align: left;
+      }
     }
   }
 }

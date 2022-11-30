@@ -11,19 +11,19 @@
   }
 
   .navigation {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 
     @media screen and (max-width: $size-m) {
-      justify-content: space-between;
       width: 100%;
     }
 
     .logoWrap {
       width: 240px;
       height: 42px;
-      margin-right: 85px;
 
       @media screen and (max-width: $size-m) {
         width: 160px;
