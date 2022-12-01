@@ -5,7 +5,7 @@ import styled from './Furnitures.module.scss';
 
 const Furnitures = () => {
   return (
-    <section className={styled.furnitures}>
+    <section className={styled.furnitures} id="shop">
       <div className={`container ${styled.furnituresWrap}`}>
         <div className={styled.textWrap}>
           <h2>Our furnitures</h2>

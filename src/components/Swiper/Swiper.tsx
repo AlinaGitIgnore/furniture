@@ -22,7 +22,7 @@ export const Swiper: React.FC<IProps> = ({ items, name }) => {
   const [commentsSliderArr, setCommentsSliderArr] = useState([]);
 
   const isMobileOrLaptop = useMediaQuery({
-    query: '(max-width: 720px)',
+    query: '(max-width: 1200px)',
   });
 
   useEffect(() => {
@@ -85,9 +85,9 @@ export const Swiper: React.FC<IProps> = ({ items, name }) => {
       <div
         className={`${styled.controllerPrev} ${styled.controller}`}
         style={
-          name === 'heroSliders'
+          name === 'heroSliders' && !isMobileOrLaptop
             ? { borderRadius: '50%' }
-            : name === 'projects'
+            : name === 'projects' && !isMobileOrLaptop
             ? { borderRadius: 'none' }
             : { display: 'none' }
         }
@@ -115,8 +115,11 @@ export const Swiper: React.FC<IProps> = ({ items, name }) => {
         <div className={styled.sliderWrap}>
           <Slider {...settings} ref={sliderRef}>
             {projectSlideArr.map(
-              (item: { title: string; image: string; id: string | number }) => (
-                <ProjectSlide projects={item} key={item.id} />
+              (
+                item: { title: string; image: string; id: string | number },
+                idx,
+              ) => (
+                <ProjectSlide projects={item} key={idx} />
               ),
             )}
           </Slider>
@@ -136,9 +139,9 @@ export const Swiper: React.FC<IProps> = ({ items, name }) => {
       <div
         className={`${styled.controllerNext} ${styled.controller}`}
         style={
-          name === 'heroSliders'
+          name === 'heroSliders' && !isMobileOrLaptop
             ? { borderRadius: '50%' }
-            : name === 'projects'
+            : name === 'projects' && !isMobileOrLaptop
             ? { borderRadius: 'none' }
             : { display: 'none' }
         }

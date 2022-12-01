@@ -1,5 +1,4 @@
 @import 'scss';
-@import 'scss';
 
 .whoWeAreSection {
   padding: 90px 0 55px 0px;
@@ -14,7 +13,6 @@
     url('../../assets/images/img-2.png');
   background-position: center;
   background-size: cover;
-  background-size: 100%;
 
   .whoWeAreContainer {
     & > h2 {
@@ -41,7 +39,7 @@
       font-weight: 300;
     }
     & > button {
-      width: 11%;
+      width: 15%;
       margin-top: 70px;
       font-size: 18px;
       line-height: 1.80857;
@@ -54,6 +52,11 @@
       border: none;
       text-transform: uppercase;
       cursor: pointer;
+
+      @media screen and (min-width: $size-m) and (max-width: $size-l) {
+        width: 25%;
+      }
+
       @media screen and (max-width: $size-m) {
         width: 100%;
       }

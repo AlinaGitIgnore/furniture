@@ -4,7 +4,7 @@ import styled from './AboutUs.module.scss';
 
 const AboutUs = () => {
   return (
-    <section className={styled.aboutSection}>
+    <section className={styled.aboutSection} id="about">
       <div className={`container ${styled.aboutWrap}`}>
         <article className={styled.textWrap}>
           <h2>About Us</h2>

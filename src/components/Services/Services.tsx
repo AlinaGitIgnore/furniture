@@ -5,7 +5,7 @@ import styled from './Services.module.scss';
 
 const Services = () => {
   return (
-    <section className={styled.servicesSection}>
+    <section className={styled.servicesSection} id="services">
       <div className="container">
         <div className="flexColumn">
           <h2>Our Services</h2>

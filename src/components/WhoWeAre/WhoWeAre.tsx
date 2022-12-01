@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from './WhoWeAre.module.scss';
 
 const WhoWeAre = () => {

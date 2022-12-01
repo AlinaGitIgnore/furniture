@@ -12,7 +12,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const isMobileOrLaptop = useMediaQuery({
-    query: '(max-width: 720px)',
+    query: '(max-width: 1200px)',
   });
 
   return (

@@ -4,10 +4,10 @@ import Info from '../Info/Info';
 
 const Footer = () => {
   return (
-    <div>
+    <footer>
       <Info />
       <Copyright />
-    </div>
+    </footer>
   );
 };
 

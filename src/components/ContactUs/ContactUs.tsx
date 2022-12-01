@@ -5,7 +5,7 @@ import styled from './ContactUs.module.scss';
 
 const ContactUs = () => {
   return (
-    <section className={styled.contactUsSection}>
+    <section className={styled.contactUsSection} id="contact">
       <div className={`container ${styled.contactContainer}`}>
         <ContactForm />
         <div className={styled.image}>

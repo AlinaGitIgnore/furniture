@@ -4,33 +4,33 @@ export const projects = [
   {
     title: 'MODERN HOME DESIGNE',
     image: images.image4,
-    id: 11,
+    id: 81,
   },
   {
     title: 'MODERN HOME DESIGNE',
     image: images.image5,
-    id: 12,
+    id: 82,
   },
 
   {
     title: 'MODERN HOME DESIGNE',
     image: images.image6,
-    id: 13,
+    id: 83,
   },
 
   {
     title: 'MODERN HOME DESIGNE',
     image: images.image6,
-    id: 14,
+    id: 84,
   },
   {
     title: 'MODERN HOME DESIGNE',
     image: images.image5,
-    id: 15,
+    id: 85,
   },
   {
     title: 'MODERN HOME DESIGNE',
     image: images.image5,
-    id: 16,
+    id: 86,
   },
 ];

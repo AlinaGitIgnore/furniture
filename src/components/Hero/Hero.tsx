@@ -7,7 +7,7 @@ import styled from './Hero.module.scss';
 
 const Hero = () => {
   return (
-    <section className={styled.heroSection}>
+    <section className={styled.heroSection} id="home">
       <div className={`container`}>
         <Header />
         <Swiper items={heroSliders} name="heroSliders" />
