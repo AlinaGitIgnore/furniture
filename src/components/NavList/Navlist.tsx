@@ -2,7 +2,17 @@ import React from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import styled from '../Header/Header.module.scss';
 
-const Navlist = () => {
+interface IProps {
+  isOpenMenu?: boolean;
+  setIsOpenMenu?: (v: boolean) => void;
+}
+
+const Navlist: React.FC<IProps> = ({ isOpenMenu, setIsOpenMenu }) => {
+  const closeMenu = () => {
+    if (setIsOpenMenu) {
+      setIsOpenMenu(!isOpenMenu);
+    }
+  };
   const navigation = [
     { name: 'Home', id: 1, href: 'home' },
     { name: 'services', id: 2, href: 'services' },
@@ -20,6 +30,7 @@ const Navlist = () => {
             className={styled.navLink}
             smooth={true}
             duration={500}
+            onClick={closeMenu}
           >
             {nav.name}
           </Link>

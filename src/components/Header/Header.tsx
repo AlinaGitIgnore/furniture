@@ -1,15 +1,18 @@
-import { images } from '../../assets/images';
+import { images } from 'assets/images';
 import Navlist from 'components/NavList/Navlist';
 import { useMediaQuery } from 'react-responsive';
 import Menu from 'components/Menu/Menu';
 import Connect from 'components/Connect/Connect';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useState } from 'react';
-
 import styled from './Header.module.scss';
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface IProps {
+  openModal: () => void;
+}
+
+const Header: React.FC<IProps> = ({ openModal }) => {
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const isMobileOrLaptop = useMediaQuery({
     query: '(max-width: 1200px)',
@@ -28,22 +31,22 @@ const Header = () => {
           <>
             <div
               className={styled.burgerMenu}
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpenMenu(!isOpenMenu)}
             >
-              {!isOpen ? <AiOutlineMenu /> : <AiOutlineClose />}
+              {!isOpenMenu ? <AiOutlineMenu /> : <AiOutlineClose />}
             </div>
           </>
         ) : (
           <>
             <Navlist />
-            <Connect />
+            <Connect openModal={() => openModal()} />
           </>
         )}
       </nav>
-      {isOpen && (
+      {isOpenMenu && (
         <Menu>
-          <Navlist />
-          <Connect />
+          <Navlist isOpenMenu setIsOpenMenu={setIsOpenMenu} />
+          <Connect openModal={() => openModal()} />
         </Menu>
       )}
     </div>

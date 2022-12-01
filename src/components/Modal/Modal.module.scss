@@ -1,0 +1,38 @@
+.backdrop {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  .modalContent {
+    max-width: 600px;
+    position: relative;
+    width: 90vw;
+    padding: 35px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    & > button {
+      position: absolute;
+      cursor: pointer;
+      z-index: 1;
+      bottom: 20px;
+      right: 20px;
+      border: 0;
+      background: #27ae60;
+      color: white;
+      padding: 5px 25px;
+      font-size: 1.3rem;
+      pointer-events: all;
+    }
+  }
+}

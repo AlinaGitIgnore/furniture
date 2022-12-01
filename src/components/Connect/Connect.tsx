@@ -1,9 +1,12 @@
 import React from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
-
 import styled from '../Header/Header.module.scss';
 
-const Connect = () => {
+interface IProps {
+  openModal: () => void;
+}
+
+const Connect: React.FC<IProps> = ({ openModal }) => {
   return (
     <div className={styled.rightSection}>
       <div className={styled.telWrap}>
@@ -14,9 +17,9 @@ const Connect = () => {
         <AiOutlineSearch />
         {/* <input /> */}
       </div>
-      <a className={styled.navLink} href="login">
+      <div className={styled.navLink} onClick={() => openModal()}>
         Login
-      </a>
+      </div>
     </div>
   );
 };
