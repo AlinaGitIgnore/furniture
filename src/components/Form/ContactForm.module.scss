@@ -73,6 +73,12 @@
     font-weight: 700;
     margin-top: 50px;
     cursor: pointer;
+    transition: 0.5s;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
 
     @media screen and (max-width: $size-m) {
       width: 100%;

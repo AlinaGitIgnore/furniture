@@ -59,6 +59,7 @@
         border: none;
         text-transform: uppercase;
         cursor: pointer;
+        transition: 0.5s;
 
         @media screen and (max-width: $size-m) {
           width: 100%;

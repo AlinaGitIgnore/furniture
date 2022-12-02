@@ -26,6 +26,7 @@
 
     .closeBtn {
       cursor: pointer;
+      transition: 0.5s;
 
       & > svg:hover,
       & > svg:focus {
@@ -37,10 +38,11 @@
       cursor: pointer;
       z-index: 1;
       border: 0;
-      background: #27ae60;
+      background: $accentColor;
       color: white;
       padding: 5px 25px;
       font-size: 1.3rem;
+      transition: 0.5s;
     }
   }
 }
