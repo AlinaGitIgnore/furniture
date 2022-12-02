@@ -1,3 +1,4 @@
+@import 'scss';
 .backdrop {
   overflow: hidden;
   position: fixed;
@@ -12,6 +13,8 @@
   z-index: 100;
 
   .modalContent {
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
     position: relative;
     width: 90vw;
@@ -21,18 +24,23 @@
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
+    .closeBtn {
+      cursor: pointer;
+
+      & > svg:hover,
+      & > svg:focus {
+        fill: $accentColor;
+      }
+    }
+
     & > button {
-      position: absolute;
       cursor: pointer;
       z-index: 1;
-      bottom: 20px;
-      right: 20px;
       border: 0;
       background: #27ae60;
       color: white;
       padding: 5px 25px;
       font-size: 1.3rem;
-      pointer-events: all;
     }
   }
 }
