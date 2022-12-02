@@ -43,7 +43,7 @@ export const Swiper: React.FC<IProps> = ({ items, name }) => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     speed: 2000,
     autoplaySpeed: 3000,
     pauseOnHover: true,
