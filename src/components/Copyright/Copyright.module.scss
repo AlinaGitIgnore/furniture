@@ -1,3 +1,4 @@
+@import 'scss';
 .copyrightWrap {
   display: flex;
   flex-direction: column;
@@ -11,7 +12,7 @@
     .socialItem {
       width: 32px;
       height: 32px;
-      background-color: #313131;
+      background-color: $grey;
       border-radius: 50%;
       padding: 4px;
 
@@ -28,7 +29,7 @@
   }
 
   .copyright {
-    color: #000;
+    color: black;
     text-align: center;
     font-size: 16px;
     margin-left: 0;

@@ -2,7 +2,7 @@
 
 .aboutSection {
   padding: 90px 0;
-  background-color: #ffb607;
+  background-color: $accentColor;
   height: auto;
 
   .aboutWrap {
@@ -37,7 +37,7 @@
       & > p {
         @include text;
         text-align: left;
-        color: #fff;
+        color: $titleColorLight;
         margin-top: 80px;
 
         @media screen and (max-width: $size-m) {
@@ -51,8 +51,8 @@
         font-size: 18px;
         line-height: 1.80857;
         font-weight: 400;
-        color: #fff;
-        background-color: #070201;
+        color: $titleColorLight;
+        background-color: $buttonDark;
         text-align: center;
         padding: 10px 0;
         border-radius: 5px;
@@ -70,8 +70,8 @@
 
         &:hover,
         &:focus {
-          color: #000;
-          background-color: #fff;
+          color: $titleColorDark;
+          background-color: $titleColorLight;
         }
       }
 

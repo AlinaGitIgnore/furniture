@@ -21,26 +21,6 @@ const Copyright = () => {
             <a href="#">{social.component}</a>
           </li>
         ))}
-        {/* <li className={styled.socialItem} key="1">
-          <a href="#">
-            <FaFacebookF />
-          </a>
-        </li>
-        <li className={styled.socialItem} key="2">
-          <a href="#">
-            <AiOutlineTwitter />
-          </a>
-        </li>
-        <li className={styled.socialItem} key="3">
-          <a href="#">
-            <FaInstagram />
-          </a>
-        </li>
-        <li className={styled.socialItem} key="4">
-          <a href="#">
-            <AiFillLinkedin />
-          </a>
-        </li> */}
       </ul>
       <p className={styled.copyright}>2022 All Rights Reserved</p>
     </div>

@@ -45,3 +45,11 @@ export const validationSchemaLogin = yup.object({
     .matches(passwordRegex, 'Must have at least one number')
     .required('Please enter your password'),
 });
+
+export const validationSchemaSubscribe = yup.object({
+  email: yup
+    .string()
+    .email('The email is incorrect')
+    .matches(emailRegex, 'The email is incorrect')
+    .required('Please enter your email'),
+});

@@ -16,7 +16,7 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0;
-    color: #090808;
+    color: $textColor;
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
@@ -31,8 +31,8 @@
     font-size: 18px;
     line-height: 1.80857;
     font-weight: 400;
-    color: #ffffff;
-    background-color: #ffb607;
+    color: $titleColorLight;
+    background-color: $accentColor;
     text-align: center;
     padding: 10px 0px;
     border-radius: 5px;
@@ -43,8 +43,8 @@
     cursor: pointer;
     &:hover,
     &:focus {
-      color: #ffffff;
-      background-color: #000;
+      color: $titleColorLight;
+      background-color: black;
     }
   }
 }

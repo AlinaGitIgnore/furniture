@@ -1,6 +1,6 @@
 import { Field, Form, Formik } from 'formik';
 import { images } from '../../assets/images';
-import { validationSchema } from '../../utils/validationSchema';
+import { validationSchemaSubscribe } from '../../utils/validationSchema';
 
 import styled from './Info.module.scss';
 
@@ -55,8 +55,8 @@ const Info = () => {
         </div>
         <Formik
           initialValues={{ email: '' }}
-          validationSchema={validationSchema}
-          onSubmit={(values, { resetForm }) => {
+          validationSchema={validationSchemaSubscribe}
+          onSubmit={(values: { email: string }, { resetForm }: any) => {
             handleSubmit(values);
             resetForm();
           }}
@@ -72,7 +72,7 @@ const Info = () => {
                 <Field
                   className={styled.input}
                   id="emailInfo"
-                  name="emailInfo"
+                  name="email"
                   placeholder="Enter your email"
                 />
               </div>

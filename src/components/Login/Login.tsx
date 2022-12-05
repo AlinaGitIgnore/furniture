@@ -73,7 +73,7 @@ const Login = () => {
                 className={styled.buttonSubmitGoogle}
                 onClick={() => login()}
               >
-                Sign in with Google 🚀{' '}
+                Sign in with Google 🚀
               </button>
             </div>
           </Form>

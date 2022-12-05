@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 700px;
   float: left;
-  border: 1px solid #000;
+  border: 1px solid black;
   padding: 17px;
   display: flex;
   flex-direction: row;
@@ -31,14 +31,14 @@
     transform: translate(50%, -50%);
     rotate: 180deg;
     & > svg {
-      fill: #fabc26;
+      fill: $accentColor;
     }
   }
   .textWrap {
     margin-left: 30px;
     & > h3 {
       font-size: 20px;
-      color: #191919;
+      color: $textColor;
       text-transform: uppercase;
       font-weight: 400;
       line-height: normal;

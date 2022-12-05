@@ -9,7 +9,7 @@
   & > h1 {
     font-size: 100px;
     font-weight: 400;
-    color: #090808;
+    color: $textColor;
     text-align: center;
     text-transform: uppercase;
     @media screen and (max-width: $size-m) {
@@ -27,8 +27,8 @@
     font-size: 18px;
     line-height: 1.80857;
     font-weight: 400;
-    color: #ffffff;
-    background-color: #ffb607;
+    color: $titleColorLight;
+    background-color: $accentColor;
     text-align: center;
     padding: 10px 0px;
     border-radius: 5px;
@@ -38,7 +38,7 @@
     cursor: pointer;
     &:hover,
     &:focus {
-      color: #ffffff;
+      color: $titleColorLight;
       background-color: #000;
     }
   }

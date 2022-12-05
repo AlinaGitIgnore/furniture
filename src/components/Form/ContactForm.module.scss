@@ -32,7 +32,7 @@
       left: 0px;
       font-weight: 400;
       font-size: 16px;
-      color: #d52121;
+      color: $errorColor;
     }
 
     .input {
@@ -45,10 +45,10 @@
       padding: 20px;
       font-size: 18px;
       font-family: 'Poppins';
-      color: #989696;
+      color: $lightGreyInput;
       resize: none;
       &::placeholder {
-        color: #989696;
+        color: $lightGreyInput;
       }
     }
     &:not(:last-child) {
@@ -64,11 +64,11 @@
     width: 30%;
     font-size: 20px;
     line-height: 1.80857;
-    color: #989696;
+    color: $lightGreyInput;
     background-color: transparent;
     text-transform: uppercase;
     text-align: center;
-    border: 2px solid #fff;
+    border: 2px solid $titleColorLight;
     padding: 10px 0;
     font-weight: 700;
     margin-top: 50px;

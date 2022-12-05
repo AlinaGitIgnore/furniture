@@ -11,7 +11,7 @@
 
   & > h4 {
     font-size: 18px;
-    color: #fabb25;
+    color: $accentColor;
     text-transform: uppercase;
     font-weight: 700;
     line-height: normal;
@@ -24,7 +24,7 @@
 
   & > p {
     font-size: 18px;
-    color: #121111;
+    color: $titleColorDark;
     margin-top: 10px;
     font-weight: 300;
     line-height: 24px;
