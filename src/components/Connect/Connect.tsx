@@ -17,6 +17,7 @@ const Connect: React.FC<IProps> = ({ openModal }) => {
         <AiOutlineSearch />
         {/* <input /> */}
       </div>
+
       <div className={styled.navLink} onClick={() => openModal()}>
         Login
       </div>

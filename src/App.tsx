@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-
+import React, { useEffect, useRef, useState } from 'react';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
 import AboutUs from './components/AboutUs/AboutUs';
@@ -13,17 +13,25 @@ import ContactUs from './components/ContactUs/ContactUs';
 import Footer from './components/Footer/Footer';
 
 function App() {
+  const [googleID, setGoogleID] = useState('');
+  useEffect(() => {
+    const { REACT_APP_GOOGLE_CLIENT_ID } = process.env;
+    setGoogleID(REACT_APP_GOOGLE_CLIENT_ID!);
+  }, []);
+
   return (
     <div className="App">
-      <Hero />
-      <Services />
-      <AboutUs />
-      <Furnitures />
-      <WhoWeAre />
-      <Projects />
-      <Clients />
-      <ContactUs />
-      <Footer />
+      <GoogleOAuthProvider clientId={googleID}>
+        <Hero />
+        <Services />
+        <AboutUs />
+        <Furnitures />
+        <WhoWeAre />
+        <Projects />
+        <Clients />
+        <ContactUs />
+        <Footer />
+      </GoogleOAuthProvider>
     </div>
   );
 }

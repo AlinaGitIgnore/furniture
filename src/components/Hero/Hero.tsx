@@ -4,6 +4,7 @@ import { heroSliders } from '../../utils/heroSliders';
 import Modal from 'components/Modal/Modal';
 import { useEffect, useState } from 'react';
 import styled from './Hero.module.scss';
+import Login from 'components/Login/Login';
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,11 +21,7 @@ const Hero = () => {
     <section className={styled.heroSection}>
       {isModalOpen && (
         <Modal closeModal={() => closeModal()}>
-          <>
-            <h3>Login</h3>
-            <input name="login" />
-            <input name="password" type="password" />
-          </>
+          <Login />
         </Modal>
       )}
       <div className={`container`} id="home">
