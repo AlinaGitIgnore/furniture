@@ -8,11 +8,6 @@ interface IProps {
 }
 
 const Modal: FC<IProps> = ({ children, closeModal }) => {
-  const loginSubmit = () => {
-    closeModal();
-    console.log('Login');
-  };
-
   return (
     <div className={styled.backdrop}>
       <div className={styled.modalContent}>
@@ -20,7 +15,6 @@ const Modal: FC<IProps> = ({ children, closeModal }) => {
           <AiOutlineClose />
         </div>
         {children}
-        <button onClick={() => loginSubmit()}>Login!</button>
       </div>
     </div>
   );

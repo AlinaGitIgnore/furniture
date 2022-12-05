@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <GoogleOAuthProvider clientId={googleID}>
+      <GoogleOAuthProvider clientId="48186051441-ips11drdmf9n22t179bb42j7145if93a">
         <Hero />
         <Services />
         <AboutUs />

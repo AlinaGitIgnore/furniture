@@ -71,8 +71,8 @@ const Info = () => {
                 )}
                 <Field
                   className={styled.input}
-                  id="email"
-                  name="email"
+                  id="emailInfo"
+                  name="emailInfo"
                   placeholder="Enter your email"
                 />
               </div>

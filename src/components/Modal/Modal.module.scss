@@ -25,6 +25,9 @@
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
     .closeBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
       cursor: pointer;
       transition: 0.5s;
 
