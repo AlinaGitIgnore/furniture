@@ -2,16 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
 import { MdArrowRightAlt } from 'react-icons/md';
 import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
-import styled from './Swiper.module.scss';
 import HeroItem from '../HeroItem/HeroItem';
-import ProjectItem from '../ProjectItem/ProjectItem';
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 import CommentPage from '../CommentPage/CommentPage';
 import { useMediaQuery } from 'react-responsive';
 import ProjectSlide from 'components/ProjectSlide/ProjectSlide';
-
 import { breakArr } from 'utils/breakArr';
+import styled from './Swiper.module.scss';
 interface IProps {
   items: any;
   name: string;
