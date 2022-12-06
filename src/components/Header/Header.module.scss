@@ -119,6 +119,8 @@
       }
       .searchForm {
         position: relative;
+        display: flex;
+        align-items: center;
         margin-right: 10px;
 
         .searchInput {
