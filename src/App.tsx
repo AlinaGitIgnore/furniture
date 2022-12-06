@@ -11,9 +11,11 @@ import Clients from './components/Clients/Clients';
 import ContactUs from './components/ContactUs/ContactUs';
 
 import Footer from './components/Footer/Footer';
+import ButtonToTop from 'components/ButtonToTop/ButtonToTop';
 
 function App() {
   const [googleID, setGoogleID] = useState('');
+
   useEffect(() => {
     const { REACT_APP_GOOGLE_CLIENT_ID } = process.env;
     setGoogleID(REACT_APP_GOOGLE_CLIENT_ID!);
@@ -31,6 +33,7 @@ function App() {
         <Clients />
         <ContactUs />
         <Footer />
+        <ButtonToTop />
       </GoogleOAuthProvider>
     </div>
   );
