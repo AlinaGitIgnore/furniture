@@ -11,7 +11,7 @@ const Connect: React.FC<IProps> = ({ openModal }) => {
     <div className={styled.rightSection}>
       <div className={styled.telWrap}>
         <p>Call Us: </p>
-        <a href="+011234567890">+011234567890</a>
+        <a href="tel:+011234567890">+011234567890</a>
       </div>
       <div className={styled.search}>
         <AiOutlineSearch />
