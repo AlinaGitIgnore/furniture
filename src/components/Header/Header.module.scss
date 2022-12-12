@@ -22,10 +22,12 @@
     }
 
     .logoWrap {
-      width: 240px;
-
-      @media screen and (max-width: $size-l) {
-        width: 50%;
+      width: 50%;
+      @media screen and (min-width: 500px) and (max-width: $size-m) {
+        width: 30%;
+      }
+      @media screen and (min-width: $size-m) {
+        width: 240px;
       }
 
       .heroLogo {
@@ -92,6 +94,7 @@
       line-height: normal;
       color: $accentColor;
       margin-right: 20px;
+      padding: 0.5rem 0;
 
       & > p {
         color: $accentColor;
@@ -108,6 +111,7 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      padding: 0.5rem 0;
 
       .searchIcon {
         display: flex;
@@ -123,6 +127,7 @@
 
         .searchInput {
           width: 100%;
+          min-width: 218px;
           border: 1px solid $accentColor;
           border-radius: 5px;
           outline: none;

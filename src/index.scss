@@ -86,9 +86,13 @@ a {
 }
 
 .container {
-  padding: 0px 50px;
-  @media screen and (max-width: $size-m) {
-    padding: 0px 15px;
+  padding: 0px 15px;
+
+  @media screen and (min-width: $size-m) {
+    padding: 0px 50px;
+  }
+  @media screen and (min-width: $size-l) {
+    padding: 0px 115px;
   }
 }
 

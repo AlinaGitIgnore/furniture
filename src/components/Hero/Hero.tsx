@@ -2,7 +2,7 @@ import Header from '../Header/Header';
 import Swiper from '../Swiper/Swiper';
 import { heroSliders } from '../../utils/heroSliders';
 import Modal from 'components/Modal/Modal';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled from './Hero.module.scss';
 import Login from 'components/Login/Login';
 
@@ -24,7 +24,7 @@ const Hero = () => {
           <Login />
         </Modal>
       )}
-      <div className={`container`} id="home">
+      <div className={styled.heroWrap} id="home">
         <Header openModal={() => openModal()} />
         <Swiper items={heroSliders} name="heroSliders" />
       </div>
