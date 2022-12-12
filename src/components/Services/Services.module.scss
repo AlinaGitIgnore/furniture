@@ -8,6 +8,7 @@
 
   & p {
     @include text;
+    margin-top: 20px;
   }
 
   .servicesList {
