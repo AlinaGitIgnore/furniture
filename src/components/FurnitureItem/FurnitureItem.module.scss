@@ -16,9 +16,10 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0;
+    margin-top: 35px;
 
     @media screen and (max-width: $size-m) {
-      text-align: center;
+      text-align: left;
     }
   }
 
@@ -30,7 +31,8 @@
     line-height: 24px;
 
     @media screen and (max-width: $size-m) {
-      text-align: center;
+      text-align: left;
+      font-size: 16px;
     }
   }
 }

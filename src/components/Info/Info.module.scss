@@ -56,7 +56,8 @@
     border-bottom: 1px solid $titleColorLight;
 
     @media screen and (min-width: $size-s) {
-      width: 70%;
+      margin: 20px 0 0 auto;
+      width: 80%;
     }
 
     @media screen and (min-width: $size-m) {
@@ -90,7 +91,7 @@
         line-height: 1.5;
         font-family: 'Poppins';
         font-size: 18px;
-        padding: 0 15px 0px 0;
+        padding: 0 15px 10px 0;
         color: $accentColor;
 
         @media screen and (max-width: $size-l) {

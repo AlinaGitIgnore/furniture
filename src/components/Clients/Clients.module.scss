@@ -16,6 +16,9 @@
 
     & > h2 {
       @include title-h2-dark;
+      @media screen and (max-width: $size-m) {
+        font-size: 22px;
+      }
     }
 
     & > p {

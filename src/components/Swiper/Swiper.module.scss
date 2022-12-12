@@ -2,7 +2,7 @@
 
 .container {
   position: relative;
-  margin-top: 100px;
+  margin-top: 80px;
   width: 100%;
 
   .controller {
@@ -48,5 +48,9 @@
   .sliderWrapComment {
     margin: 0 auto;
     width: 80%;
+
+    @media screen and (max-width: $size-m) {
+      width: 100%;
+    }
   }
 }

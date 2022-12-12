@@ -15,10 +15,6 @@
     text-align: left;
     font-weight: 400;
     margin-bottom: 40px;
-
-    @media screen and (max-width: $size-m) {
-      text-align: center;
-    }
   }
   .formWrap {
     position: relative;
@@ -37,6 +33,7 @@
 
     .input {
       width: 100%;
+      height: 55px;
       border: none;
       border-radius: 5px;
       outline: none;
@@ -71,7 +68,7 @@
     border: 2px solid $titleColorLight;
     padding: 10px 0;
     font-weight: 700;
-    margin-top: 50px;
+    margin-top: 30px;
     cursor: pointer;
     transition: 0.5s;
 
@@ -81,7 +78,8 @@
     }
 
     @media screen and (max-width: $size-m) {
-      width: 100%;
+      width: 130px;
+      padding: 5px 0;
     }
   }
 }

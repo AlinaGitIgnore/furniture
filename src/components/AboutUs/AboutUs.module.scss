@@ -28,10 +28,6 @@
       & > h2 {
         @include title-h2-light;
         text-align: left;
-
-        @media screen and (max-width: $size-m) {
-          text-align: center;
-        }
       }
 
       & > p {
@@ -41,7 +37,7 @@
         margin-top: 80px;
 
         @media screen and (max-width: $size-m) {
-          text-align: center;
+          margin-top: 30px;
         }
       }
 
@@ -62,7 +58,8 @@
         transition: 0.5s;
 
         @media screen and (max-width: $size-m) {
-          width: 100%;
+          margin-top: 40px;
+          width: 150px;
         }
         @media screen and (min-width: $size-l) {
           width: 30%;
@@ -84,7 +81,8 @@
       width: 50%;
 
       @media screen and (max-width: $size-m) {
-        display: none;
+        width: 100%;
+        margin-top: 50px;
       }
     }
   }

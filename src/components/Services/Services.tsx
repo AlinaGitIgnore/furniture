@@ -9,10 +9,7 @@ const Services = () => {
       <div className="container">
         <div className="flexColumn">
           <h2>Our Services</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Laudantium, dolorum..
-          </p>
+          <p>There are many variations of passages of Lorem Ipsum</p>
           <ul className={styled.servicesList}>
             {services.map(service => {
               const { id, name, text, image } = service;

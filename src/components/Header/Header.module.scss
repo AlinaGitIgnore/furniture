@@ -23,11 +23,9 @@
 
     .logoWrap {
       width: 240px;
-      height: 42px;
 
       @media screen and (max-width: $size-l) {
-        width: 160px;
-        height: 28px;
+        width: 50%;
       }
 
       .heroLogo {
