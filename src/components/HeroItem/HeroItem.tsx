@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from './HeroItem.module.scss';
-
+import { Link } from 'react-scroll';
 export interface IHeroItemProps {
   slider: {
     title: string;
@@ -13,13 +13,10 @@ const HeroItem: React.FC<IHeroItemProps> = ({ slider }) => {
     <div className={styled.swiperItem}>
       <h1> {slider.title}</h1>
       <p>{slider.text}</p>
-      <button
-        onClick={() => {
-          console.log('contact.html');
-        }}
-      >
+
+      <Link to={'contact'} className={styled.buttonLink}>
         Contact Us
-      </button>
+      </Link>
     </div>
   );
 };

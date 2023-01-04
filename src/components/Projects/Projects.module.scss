@@ -3,9 +3,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 90px 40px;
-  @media screen and (max-width: $size-m) {
-    padding: 50px 15px 90px 15px;
+  padding: 90px 15px 0 15px;
+
+  @media screen and (min-width: $size-m) {
+    padding: 90px 40px;
   }
 
   & > h2 {

@@ -22,7 +22,7 @@
     margin-top: 50px;
   }
 
-  & > button {
+  & > .buttonLink {
     width: 150px;
     margin-top: 15%;
     font-size: 18px;
@@ -31,7 +31,7 @@
     color: $titleColorLight;
     background-color: $accentColor;
     text-align: center;
-    padding: 10px 0px;
+    padding: 10px 0;
     border-radius: 5px;
     border: none;
     text-transform: uppercase;

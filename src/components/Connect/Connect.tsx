@@ -12,7 +12,6 @@ const Connect: React.FC<IProps> = ({ openModal }) => {
   const [isShowSearch, setIsShowSearch] = useState(false);
   const handleSearch = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    console.log(searchValue);
     setSearchValue('');
   };
   return (

@@ -16,8 +16,8 @@ interface IProps {
 }
 
 export const Swiper: React.FC<IProps> = ({ items, name }) => {
-  const [projectSlideArr, setProjectSlideArr] = useState([]);
-  const [commentsSliderArr, setCommentsSliderArr] = useState([]);
+  const [projectSlideArr, setProjectSlideArr] = useState<any[][]>([[]]);
+  const [commentsSliderArr, setCommentsSliderArr] = useState<any[][]>([[]]);
 
   const isMobileOrLaptop = useMediaQuery({
     query: '(max-width: 1200px)',
@@ -26,13 +26,11 @@ export const Swiper: React.FC<IProps> = ({ items, name }) => {
   useEffect(() => {
     const projectSlide = breakArr(3, items);
     const commentsSlider = breakArr(2, items);
-    //@ts-ignore
     setProjectSlideArr(projectSlide);
-    //@ts-ignore
     setCommentsSliderArr(commentsSlider);
   }, [items]);
 
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<Slider>(null);
 
   var settings = {
     arrows: false,
@@ -89,8 +87,7 @@ export const Swiper: React.FC<IProps> = ({ items, name }) => {
             ? { borderRadius: 'none' }
             : { display: 'none' }
         }
-        //@ts-ignore
-        onClick={() => sliderRef.current.slickPrev()}
+        onClick={() => sliderRef.current?.slickPrev()}
       >
         {name === 'heroSliders' ? (
           <MdArrowRightAlt style={{ rotate: '180deg' }} />
@@ -112,14 +109,9 @@ export const Swiper: React.FC<IProps> = ({ items, name }) => {
       ) : name === 'projects' ? (
         <div className={styled.sliderWrap}>
           <Slider {...settings} ref={sliderRef}>
-            {projectSlideArr.map(
-              (
-                item: { title: string; image: string; id: string | number },
-                idx,
-              ) => (
-                <ProjectSlide projects={item} key={idx} />
-              ),
-            )}
+            {projectSlideArr.map((item, idx) => (
+              <ProjectSlide projects={item} key={idx} />
+            ))}
           </Slider>
         </div>
       ) : name === 'comments' ? (
@@ -143,8 +135,7 @@ export const Swiper: React.FC<IProps> = ({ items, name }) => {
             ? { borderRadius: 'none' }
             : { display: 'none' }
         }
-        //@ts-ignore
-        onClick={() => sliderRef.current.slickNext()}
+        onClick={() => sliderRef.current?.slickNext()}
       >
         {name === 'heroSliders' ? <MdArrowRightAlt /> : <SlArrowRight />}
       </div>

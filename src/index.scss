@@ -18,7 +18,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  /* outline: 1px solid red; */
+  transition: ease all 0.5s;
 }
 
 h1,
